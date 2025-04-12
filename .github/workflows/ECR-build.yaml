@@ -31,5 +31,5 @@ jobs:
 
       - name: Build, tag, and push image to ECR
         run: |
-          docker build -t 255945442255.dkr.ecr.us-east-1.amazonaws.com/lachecr/lach:latest .
-          docker push 255945442255.dkr.ecr.us-east-1.amazonaws.com/lachecr/lach:latest
+          docker build -t 255945442255.dkr.ecr.us-east-1.amazonaws.com/lachecr:latest .
+          docker push 255945442255.dkr.ecr.us-east-1.amazonaws.com/lachecr:latest
