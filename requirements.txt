@@ -3,4 +3,4 @@
 # The function url_quote was removed from werkzeug.urls in newer Werkzeug versions (>=2.1+), but some versions of Flask (especially <2.2) still try to import it.
 
 flask
-# werkzeug==2.1.2
+werkzeug
