@@ -11,12 +11,13 @@ resource "aws_ecs_task_definition" "flask_task" {
 
   container_definitions = jsonencode([
     {
-      name  = "lach"
-      image = 255945442255.dkr.ecr.us-east-1.amazonaws.com/lachecr:latest
+      name  = "lach",
+      image = "255945442255.dkr.ecr.us-east-1.amazonaws.com/lachecr:latest",
       portMappings = [
         {
-          containerPort = 5050
-          hostPort      = 5050
+          containerPort = 5050,
+          hostPort      = 5050,
+          protocol      = "tcp"
         }
       ]
     }
