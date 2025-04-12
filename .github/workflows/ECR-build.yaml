@@ -31,7 +31,7 @@ jobs:
 
       - name: Build, tag, and push image to ECR
         run: |
-          IMAGE_URI=${{ steps.login-ecr.outputs.registry }}/${{ env.ECR_REPOSITORY }}
-          docker build -t $IMAGE_URI:latest -t $IMAGE_URI:${{ env.IMAGE_TAG }} .
+          IMAGE_URI=${{ secrets.AWS_ACCOUNT_ID }}.dkr.ecr.${{ secrets.AWS_REGION }}.amazonaws.com/${{ secrets.ECR_REPOSITORY }}
+          docker build -t lach:latest -t lach:${{ env.IMAGE_TAG }} .
           docker push $IMAGE_URI:latest
           docker push $IMAGE_URI:${{ env.IMAGE_TAG }}
